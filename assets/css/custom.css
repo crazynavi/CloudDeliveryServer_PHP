@@ -1,0 +1,395 @@
+*{
+    box-sizing:border-box;
+}
+ul, li{
+    list-style:none;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+body{
+    font-family:"Roboto", sans-serif;
+    padding-top: 60px;
+    min-width: 1100px;
+}
+.red {
+    background-color: #EC3543;
+    color: #fff;
+}
+.blue {
+    background-color: #92278f;
+    color: #fff;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right !important;
+}
+
+
+
+
+.header-top{
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    top: 0;
+    background-color:white;
+}
+img.logo{
+    height:100%;
+    margin-left:10px;
+}
+.header-right li{
+    border-left: 1px solid #e4e4e4;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+}
+.header-right li:hover {
+    background-color: #e4e4e4;
+}
+.header-right li:last-child {
+    border-right: 1px solid #e4e4e4;
+}
+.search input[type="text"] {
+    width: 227px;
+    height: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    border: 0;
+    margin-top: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 30px;
+    background-color: #fff;
+    border: 1px solid #636363;
+}
+.search input[type="submit"] {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background-image: url(../images/search.png);
+    background-repeat: no-repeat;
+    background-size: 19px 19px;
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -10px;
+    right: 25px;
+    cursor: pointer;
+}
+input[type="hidden" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    display: none !important;
+    padding: initial;
+    border: initial;
+}
+
+.header-right a:before {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 24px;
+}
+form{
+    margin:0;
+}
+.header-right a {
+    line-height: 60px;
+    color: #525458;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+.header-right li ul li.search {
+    height: 60px;
+    background-color: #DBDBDB;
+}
+.header-right li ul{
+    display: none;
+    position: absolute;
+}
+.header-right li:hover>ul {
+    display: block;
+}
+.header-right li ul {
+    background-color: #DBDBDB;
+    padding-left:0;
+    height: auto;
+    right: 0;
+}
+.header-right li {
+    float: left;
+    display: block;
+    position: relative;
+}
+.header-right li ul li {
+    border-left: 0px solid #606366;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.header-right li a{
+    display:block;
+    height:100%;
+}
+
+.clock #time {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    color: #525458;
+    font-weight: 100;
+}
+.clock #AM_PM {
+    color: #525458;
+}
+.clock div {
+    padding-top: 13px;
+}
+.clock #date {
+    font-size: 12px;
+    color: #525458;
+    display: block;
+    text-align: center;
+}
+.user{
+    min-width: 240px;
+}
+.user a {
+    padding-left: 35px;
+    position: relative;
+    line-height: 14px !important;
+}
+.user a span.img-user {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    display: block;
+    background-color: #fff;
+    margin: 0px;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    left: -3px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+.user a span.img-user img {
+    width: 100%;
+    display: block;
+}
+.user a .info-user {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+}
+.user a .info-user span.user-company {
+    display: block;
+    font-weight: bold;
+}
+.user a .info-user span.user-name {
+    display: block;
+    font-weight: 12px;
+}
+.header-right li ul li {
+    border-left: 0px solid #606366;
+    padding-right: 20px;
+    padding-left: 20px;
+    float:none;
+}
+.header-right li ul li:hover {
+    background-color: #EAEAEA;
+}
+.header-right li ul li a{
+    text-decoration:none;
+    display:block;
+    color: #606366;
+}
+.user ul li {
+    background-color: #fff;
+    border-bottom: 1px solid #E3E3E6;
+    height: 31px !important;
+    padding-left: 10px !important;
+}
+.user ul li a {
+    line-height: 30px !important;
+    padding-left: 20px;
+    text-align: left;
+}
+.user ul li a:before {
+    margin: 0;
+    margin-right: 10px;
+    font-size: 24px;
+    display: inline-block;
+    content: ' ';
+    width: 5px;
+    height: 20px;
+    background-color: #525458;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.header-right li ul li:last-child {
+    border-right: 0px solid #606366;
+    border-bottom: 0;
+}
+.user ul li.user-salir-perfil {
+    background-color: #E3E3E6;
+    height: 70px !important;
+    width: 100%;
+}
+.user ul li.user-salir-perfil .rol {
+    font-size: 12px;
+    padding: 10px 0px 10px 0px;
+    float: left;
+}
+.user ul li.user-salir-perfil .buttos {
+    min-width: 200px;
+    float: left;
+}
+.user ul li.user-salir-perfil .buttos a {
+    height: auto;
+    border-radius: 4px;
+    border: 0;
+    cursor:pointer;
+    width: 48%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: #fff;
+    float: left;
+}
+.user ul li.user-salir-perfil .buttos a:before {
+    display:none;
+}
+.user ul li.user-salir-perfil .buttos a:last-child {
+    margin-left: 2%;
+}
+
+/* active navbar */
+.act-nav {
+    width: 100%;
+    background-color: #D6D8DA;
+    height: 40px;
+    position: relative;
+    z-index: 99999;
+}
+.act-nav ul {
+    height: 40px;
+}
+.act-nav ul li.actMenu {
+    border-left: 0;
+}
+.act-nav ul li {
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #BFC1C4;
+}
+.nav-h ul li {
+    float: left;
+    display: block;
+    position: relative;
+}
+.act-nav ul li.actMenu a {
+    color: #fff;
+    font-size: 14px;
+}
+.act-nav ul li a {
+    line-height: 40px;
+    font-size: 14px;
+    color: #525458;
+    position: relative;
+    padding-left: 30px;
+}
+.nav-h ul li a {
+    text-decoration: none;
+    display: block;
+}
+.act-nav ul li a:before {
+    top: 0px;
+    position: absolute;
+    left: -20px;
+}
+
+.act-nav ul li.actMenu ul {
+    min-width: 200px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid #DBDBDB;
+    border-left: 0;
+}
+.act-nav ul li ul {
+    background-color: #eee;
+    height: auto;
+    left: 0;
+}
+
+.nav-h ul li ul {
+    display: none;
+    position: absolute;
+}
+.act-nav ul li.actMenu ul li {
+    border-bottom: 1px solid #DBDBDB;
+}
+.nav-h ul li ul li {
+    float: none;
+}
+
+.act-nav ul li {
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid #BFC1C4;
+}
+.nav-h ul li {
+    float: left;
+    display: block;
+    position: relative;
+}
+.act-nav ul li.actMenu ul li a {
+    font-size: 14px;
+    color: #333;
+    border: 0;
+}
+
+.act-nav ul li.actMenu a {
+    color: #fff;
+    font-size: 14px;
+}
+.act-nav ul li a {
+    line-height: 40px;
+    font-size: 14px;
+    color: #525458;
+    position: relative;
+    padding-left: 30px;
+}
+.nav-h ul li a {
+    text-decoration: none;
+    display: block;
+}
+.nav-h ul li:hover>ul {
+    display: block;
+}
+.act-nav ul li ul li:hover {
+    opacity: .7;
+}
+.act-nav ul li:hover a, .act-nav ul .act a {
+    color: #92278f;
+    border-bottom: 2px solid #92278f;
+}
+.act-nav ul li.actMenu:hover>a {
+    border: 0;
+    color: white;
+}
