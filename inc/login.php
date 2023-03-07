@@ -718,6 +718,7 @@
             <?php
             if (isset($_SESSION['invalid_details'])) {  
               echo "<p style='font-size:14px; color:red;'>". $_SESSION['invalid_details'] ."</p>";
+              session_destroy();
             }
             ?>
             <p class="error"></p>
@@ -726,7 +727,7 @@
                 <input class="form-control h-auto form-control-solid py-4 px-8" type="text" placeholder="Email"
                   name="user_email" value="<?php if (isset($_COOKIE["user_email"])) {
                     echo $_COOKIE["user_email"];
-                  } ?>" autocomplete="off">
+                  } ?>">
               </div>
               <div class="form-group mb-5">
                 <input class="form-control h-auto form-control-solid py-4 px-8" type="password" placeholder="Password"
@@ -734,14 +735,14 @@
                     echo $_COOKIE["user_password"];
                   } ?>">
               </div>
-              <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
+              <!-- <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
                 <div class="checkbox-inline">
                   <label class="checkbox m-0 text-muted">
-                    <input type="checkbox" name="remember" <?php if (isset($_COOKIE["user_email"])) { ?> checked <?php } ?>>
+                    <input type="checkbox" name="remember">
                     <span></span>Remember me</label>
                 </div>
 
-              </div>
+              </div> -->
               <button type="submit" name="login" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Sign
                 In</button>
             </form>
@@ -761,12 +762,11 @@
   <script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#6993FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
   <!--end::Global Config-->
   <!--begin::Global Theme Bundle(used by all pages)-->
-  <script src="assets/plugins/global/plugins.bundle.js"></script>
-  <script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
-  <script src="assets/js/scripts.bundle.js"></script>
+  <!-- <script src="assets/plugins/custom/prismjs/prismjs.bundle.js"></script>
+  <script src="assets/js/scripts.bundle.js"></script> -->
   <!--end::Global Theme Bundle-->
   <!--begin::Page Scripts(used by this page)-->
-  <script src="assets/js/pages/custom/login/login-general.js"></script>
+  <!-- <script src="assets/js/pages/custom/login/login-general.js"></script> -->
   <!--end::Page Scripts-->
 </body>
 

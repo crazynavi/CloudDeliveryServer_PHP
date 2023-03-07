@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
         $_SESSION['user_email'] = $username;
         header("location:/");
     } else {
-        $_SESSION['invalid_details'] = "INVALID USERNAME/PASSWORD Combination!";
+        $_SESSION['invalid_details'] = "Username or password is not valid";
         header('location:/');
     }
     $stmt->close();
