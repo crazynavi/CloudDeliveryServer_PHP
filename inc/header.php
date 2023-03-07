@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("conn/connection.php"); ?>
 
 <head>
@@ -25,7 +24,7 @@ include("conn/connection.php"); ?>
 			</div>
 			<ul class="header-right h-100 m-0 d-flex align-items-center flex-row">
 				<li class="search hidden-mobile">
-					<form action="panel.php" enctype="multipart/form-data" method="GET">
+					<form action="" enctype="multipart/form-data" method="GET">
 						<input name="TRACKNUM" type="text" class="buscador" value=""
 							placeholder="Tracking number / guia" id="buscar">
 						<input class="boton blue" type="submit">
@@ -39,10 +38,10 @@ include("conn/connection.php"); ?>
 				</li>
 				<li class="hidden-mobile">
 					<a class="flaticon-globe41"
-						href="panel.php?OPTIONS=5&amp;SESSION=PrimUt7EpJd34QVp1pWYd0&amp;IDS=40&amp;MENU=Clientes&amp;IDMENU=5">Cliente</a>
+						href="?OPTIONS=5&amp;SESSION=PrimUt7EpJd34QVp1pWYd0&amp;IDS=40&amp;MENU=Clientes&amp;IDMENU=5">Cliente</a>
 					<ul class="m-0">
 						<li class="search">
-							<form action="panel.php" autocomplete="off">
+							<form action="" autocomplete="off">
 								<input placeholder="Buscar cliente" type="text" name="buscar" value="">
 								<input class="boton blue" type="submit">
 								<input type="hidden" name="OPTIONS" value="5" readonly="">
@@ -75,20 +74,20 @@ include("conn/connection.php"); ?>
 					</a>
 					<ul>
 
-						<li><a href="panel.php?OPTIONS=MICUENTA&amp;MENU=Mi Perfil">Cambiar Clave</a> </li>
+						<li><a href="?OPTIONS=MICUENTA&amp;MENU=Mi Perfil">Cambiar Clave</a> </li>
 						<li><a href="http://webmail.opscargo.com.do" target="_blank">Webmail</a></li>
 
 
 
 
-						<li><a href="panel.php?OPTIONS=AYUDA&amp;MENU=Solicitar Ayuda">Solicitar Ayuda</a> </li>
-						<li><a href="panel.php?OPTIONS=DESCARGAR&amp;MENU=Solicitar Ayuda">Programas</a> </li>
+						<li><a href="?OPTIONS=AYUDA&amp;MENU=Solicitar Ayuda">Solicitar Ayuda</a> </li>
+						<li><a href="?OPTIONS=DESCARGAR&amp;MENU=Solicitar Ayuda">Programas</a> </li>
 
 						<li class="user-salir-perfil">
 							<span class="rol">Rol: SysAdmin </span>
 							<div class="buttos">
-								<a class="boton blue" href="panel.php?OPTIONS=MICUENTA&amp;MENU=Mi Perfil">Mi perfil</a>
-								<a href="salir.php" class="boton red">Salir</a>
+								<a class="boton blue" href="?OPTIONS=MICUENTA&amp;MENU=Mi Perfil">Mi perfil</a>
+								<a href="logout.php" class="boton red">Salir</a>
 							</div>
 						</li>
 					</ul>
