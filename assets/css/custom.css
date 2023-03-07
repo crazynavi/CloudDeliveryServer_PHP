@@ -321,6 +321,7 @@ form{
 .act-nav ul li a:before {
     top: 0px;
     position: absolute;
+    line-height: 40px;
     left: -20px;
 }
 

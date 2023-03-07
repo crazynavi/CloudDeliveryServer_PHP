@@ -14,6 +14,9 @@ include("conn/connection.php"); ?>
 	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/flaticon/flaticon.css">
+    
 </head>
 
 <body id="kt_body" class="header-fixed header-mobile-fixed page-loading">
