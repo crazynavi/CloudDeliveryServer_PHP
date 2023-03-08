@@ -16,7 +16,11 @@ include("conn/connection.php"); ?>
 	<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="assets/flaticon/flaticon.css">
-    
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="assets/js/app.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 
 <body id="kt_body" class="header-fixed header-mobile-fixed page-loading">
