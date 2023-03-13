@@ -87,23 +87,64 @@ include_once('inc/header.php');
 		</ul>
 
 	</div>
-    <div class="nav-h right">
-            <ul>
-              
-       <li> <a class="flaticon-commercial15" href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=9&amp;AX=1&amp;MENU2=Paquetes" title="Paquetes">Paquetes</a></li>
-   
-       <li> <a class="flaticon-men1" href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=121&amp;AX=6D&amp;MENU2=Recibir" title="Recibir">Recibir</a></li>
-   
-       <li> <a class="flaticon-hand119" href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=186&amp;AX=14&amp;MENU2=Ruta" title="Ruta">Ruta</a></li>
-   
-       <li> <a class="flaticon-wirelessconnectivity14" href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=135&amp;AX=10&amp;MENU2=Pre-Alerta" title="Pre-alerta">Pre-alerta</a></li>
-   
-       <li> <a class="flaticon-hand119" href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=187&amp;AX=15&amp;MENU2=Documentos" title="Documentos">Documentos</a></li>
-   
-       <li> <a class="flaticon-funnel2" href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=136&amp;AX=11&amp;MENU2=Anular" title="Anular">Anular</a></li>
-                 </ul>
-        </div>
-</div>
+	<div class="nav-h right">
+		<ul>
 
+			<li> <a class="flaticon-commercial15"
+					href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aereo&amp;IDMENU=9&amp;AX=1&amp;MENU2=Paquetes"
+					title="Paquetes">Paquetes</a></li>
+
+			<li> <a class="flaticon-men1"
+					href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aereo&amp;IDMENU=121&amp;AX=6D&amp;MENU2=Recibir"
+					title="Recibir">Recibir</a></li>
+
+			<li> <a class="flaticon-hand119"
+					href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aereo&amp;IDMENU=186&amp;AX=14&amp;MENU2=Ruta"
+					title="Ruta">Ruta</a></li>
+
+			<li> <a class="flaticon-wirelessconnectivity14"
+					href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aereo&amp;IDMENU=135&amp;AX=10&amp;MENU2=Pre-Alerta"
+					title="Pre-alerta">Pre-alerta</a></li>
+
+			<li> <a class="flaticon-hand119"
+					href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aereo&amp;IDMENU=187&amp;AX=15&amp;MENU2=Documentos"
+					title="Documentos">Documentos</a></li>
+
+			<li> <a class="flaticon-funnel2"
+					href="?OPTIONS=8&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aereo&amp;IDMENU=136&amp;AX=11&amp;MENU2=Anular"
+					title="Anular">Anular</a></li>
+		</ul>
+	</div>
+</div>
+<?php
+if (isset($_GET['MENU2'])) {
+
+	switch ($_GET['MENU2']) {
+		case 'Paquetes':
+			include("pages/components/aerial/packages.php");
+			break;
+		case 'Recibir':
+			include("pages/components/aerial/receive.php");
+			break;
+		case 'Ruta':
+			include("pages/components/aerial/route.php");
+			break;
+		case 'Pre-Alerta':
+			include("pages/components/aerial/prealert.php");
+			break;
+		case 'Documentos':
+			include("pages/components/aerial/documents.php");
+			break;
+		case 'Anular':
+			include("pages/components/aerial/cancel.php");
+			break;
+		default:
+
+			break;
+	}
+} else {
+	include("pages/components/aerial/aerial.php");
+}
+?>
 <?php
 include('inc/footer.php'); ?>

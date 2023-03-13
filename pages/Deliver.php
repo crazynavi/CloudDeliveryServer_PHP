@@ -91,6 +91,5 @@ include_once('inc/header.php');
         <ul>
         </ul>
     </div>
-
     <?php
     include('inc/footer.php'); ?>

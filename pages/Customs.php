@@ -90,12 +90,33 @@ include_once('inc/header.php');
     <div class="nav-h right">
             <ul>
               
-       <li> <a class="flaticon-letter28" href="?OPTIONS=190&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=191&amp;AX=1&amp;MENU2=Guias" title="Guias">Guias</a></li>
+       <li> <a class="flaticon-letter28" href="?OPTIONS=190&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aduanas&amp;IDMENU=191&amp;AX=1&amp;MENU2=Guias" title="Guias">Guias</a></li>
    
-       <li> <a class="flaticon-letter28" href="?OPTIONS=190&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=192&amp;AX=2&amp;MENU2=Bloquear" title="Bloquear">Bloquear</a></li>
+       <li> <a class="flaticon-letter28" href="?OPTIONS=190&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Aduanas&amp;IDMENU=192&amp;AX=2&amp;MENU2=Bloquear" title="Bloquear">Bloquear</a></li>
                  </ul>
         </div>
 </div>
+
+<?php
+if (isset($_GET['MENU2'])) {
+	
+	switch ($_GET['MENU2']) {
+		case 'Guias':
+			include("pages/components/customs/guides.php");
+			break;
+		case 'Bloquear':
+			include("pages/components/customs/block.php");
+			break;
+		
+		default:
+
+			break;
+	}
+}
+else{
+	 include("pages/components/customs/customs.php");
+}
+?>
 
 <?php
 include('inc/footer.php'); ?>

@@ -90,14 +90,36 @@ include_once('inc/header.php');
     <div class="nav-h right">
             <ul>
               
-       <li> <a class="flaticon-discount3" href="?OPTIONS=104&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=34&amp;AX=4&amp;MENU2=Tasa dolar" title="Tasa dolar">Tasa dolar</a></li>
+       <li> <a class="flaticon-discount3" href="?OPTIONS=104&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Configuracion&amp;IDMENU=34&amp;AX=4&amp;MENU2=Tasa dolar" title="Tasa dolar">Tasa dolar</a></li>
    
-       <li> <a class="flaticon-hand119" href="?OPTIONS=104&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=75&amp;AX=8&amp;MENU2=Forma de pago" title="Forma de pago">Forma de pago</a></li>
+       <li> <a class="flaticon-hand119" href="?OPTIONS=104&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Configuracion&amp;IDMENU=75&amp;AX=8&amp;MENU2=Forma de pago" title="Forma de pago">Forma de pago</a></li>
    
-       <li> <a class="flaticon-discount3" href="?OPTIONS=104&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=73&amp;AX=6&amp;MENU2=Itebis" title="Itebis">Itebis</a></li>
+       <li> <a class="flaticon-discount3" href="?OPTIONS=104&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Configuracion&amp;IDMENU=73&amp;AX=6&amp;MENU2=Itebis" title="Itebis">Itebis</a></li>
                  </ul>
         </div>
 </div>
 
+<?php
+if (isset($_GET['MENU2'])) {
+
+        switch ($_GET['MENU2']) {
+                case 'Tasa dolar':
+                        include("pages/components/setting/dollar_rate.php");
+                        break;
+                case 'Forma de pago':
+                        include("pages/components/setting/way_to_pay.php");
+                        break;
+                case 'Itebis':
+                        include("pages/components/setting/itebis.php");
+                        break;    
+              
+                default:
+                        break;
+        }
+} else {
+        include("pages/components/setting/setting.php");
+}
+
+?>
 <?php
 include('inc/footer.php'); ?>

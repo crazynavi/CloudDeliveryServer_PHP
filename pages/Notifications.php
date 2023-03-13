@@ -91,27 +91,54 @@ include_once('inc/header.php');
                 <ul>
 
                         <li> <a class="flaticon-mail1"
-                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=17&amp;AX=1&amp;MENU2=Enviar notificacion"
+                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Notificaciones&amp;IDMENU=17&amp;AX=1&amp;MENU2=Enviar notificacion"
                                         title="Enviar notificacion">Enviar notificacion</a></li>
 
                         <li> <a class="flaticon-menu55"
-                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=18&amp;AX=2&amp;MENU2=Outbox Mail"
+                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Notificaciones&amp;IDMENU=18&amp;AX=2&amp;MENU2=Outbox Mail"
                                         title="Outbox mail">Outbox mail</a></li>
 
                         <li> <a class="flaticon-cancel29"
-                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=71&amp;AX=7&amp;MENU2=BlackList"
+                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Notificaciones&amp;IDMENU=71&amp;AX=7&amp;MENU2=BlackList"
                                         title="Blacklist">Blacklist</a></li>
 
                         <li> <a class="flaticon-settings48"
-                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=15&amp;AX=3&amp;MENU2=Configuracion"
+                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Notificaciones&amp;IDMENU=15&amp;AX=3&amp;MENU2=Configuracion"
                                         title="Configuracion">Configuracion</a></li>
 
                         <li> <a class="flaticon-website8"
-                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=106&amp;AX=8&amp;MENU2=Diseno"
+                                        href="?OPTIONS=14&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Notificaciones&amp;IDMENU=106&amp;AX=8&amp;MENU2=Diseno"
                                         title="Diseno">Diseno</a></li>
                 </ul>
         </div>
 </div>
+<?php
+if (isset($_GET['MENU2'])) {
+
+        switch ($_GET['MENU2']) {
+                case 'Enviar notificacion':
+                        include("pages/components/notifications/send.php");
+                        break;
+                case 'Outbox Mail':
+                        include("pages/components/notifications/outbox.php");
+                        break;
+                case 'BlackList':
+                        include("pages/components/notifications/blacklist.php");
+                        break;
+                case 'Configuracion':
+                        include("pages/components/notifications/setting.php");
+                        break;
+                case 'Diseno':
+                        include("pages/components/notifications/design.php");
+                        break;
+                default:
+                        break;
+        }
+} else {
+        include("pages/components/notifications/notifications.php");
+}
+
+?>
 
 <?php
 include('inc/footer.php'); ?>

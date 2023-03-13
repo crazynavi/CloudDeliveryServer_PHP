@@ -91,11 +91,19 @@ include_once('inc/header.php');
 		<ul>
 
 			<li> <a class="flaticon-file148"
-					href="OPTIONS=39&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=40&amp;AX=1&amp;MENU2=Resumen"
+					href="/?OPTIONS=39&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Dashboard&amp;IDMENU=40&amp;AX=1&amp;MENU2=Resumen"
 					title="Resumen">Resumen</a></li>
 		</ul>
 	</div>
 </div>
+<?php
+if (isset($_GET['MENU'])) {
+	if ($_GET['MENU'] == 'Dashboard') {
+		include('pages/components/dashboard/dashboard.php');
+	}
 
+}
+
+?>
 <?php
 include('inc/footer.php'); ?>

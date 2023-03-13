@@ -87,17 +87,48 @@ include_once('inc/header.php');
 		</ul>
 
 	</div>
-    <div class="nav-h right">
-            <ul>
-              
-       <li> <a class="flaticon-team2" href="OPTIONS=5&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=6&amp;AX=1&amp;MENU2=Mis Clientes" title="Mis clientes">Mis clientes</a></li>
-   
-       <li> <a class="flaticon-write13" href="OPTIONS=5&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=7&amp;AX=2&amp;MENU2=Solicitudes" title="Solicitudes">Solicitudes</a></li>
-   
-       <li> <a class="flaticon-team2" href="OPTIONS=5&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=205&amp;AX=13&amp;MENU2=Listado de Clientes" title="Listado de clientes">Listado de clientes</a></li>
-                 </ul>
-        </div>
-</div>
+	<div class="nav-h right">
+		<ul>
 
+			<li> <a class="flaticon-team2"
+					href="/?OPTIONS=5&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Clientes&amp;IDMENU=6&amp;AX=1&amp;MENU2=Mis Clientes"
+					title="Mis clientes">Mis clientes</a></li>
+
+			<li> <a class="flaticon-write13"
+					href="/?OPTIONS=5&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Clientes&amp;IDMENU=7&amp;AX=2&amp;MENU2=Solicitudes"
+					title="Solicitudes">Solicitudes</a></li>
+
+			<li> <a class="flaticon-team2"
+					href="/?OPTIONS=5&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Clientes&amp;IDMENU=205&amp;AX=13&amp;MENU2=Listado de Clientes"
+					title="Listado de clientes">Listado de clientes</a></li>
+		</ul>
+	</div>
+</div>
+<?php
+if (isset($_GET['MENU2'])) {
+	
+	switch ($_GET['MENU2']) {
+		case 'Mis Clientes':
+			include("pages/components/customer/myclients.php");
+			break;
+		case 'Solicitudes':
+			include("pages/components/customer/request.php");
+			break;
+		case 'Listado de Clientes':
+			include("pages/components/customer/clientlist.php");
+			break;
+		default:
+
+			break;
+	}
+}
+else{
+	 include("pages/components/customer/customers.php");
+}
+// include("pages/components/customs/clientlist.php");
+
+
+
+?>
 <?php
 include('inc/footer.php'); ?>

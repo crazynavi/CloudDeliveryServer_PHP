@@ -87,23 +87,64 @@ include_once('inc/header.php');
 		</ul>
 
 	</div>
-    <div class="nav-h right">
-            <ul>
-              
-       <li> <a class="flaticon-website17" href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=20&amp;AX=1&amp;MENU2=Menu" title="Menu">Menu</a></li>
-   
-       <li> <a class="flaticon-image2" href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=31&amp;AX=3&amp;MENU2=Banner" title="Banner">Banner</a></li>
-   
-       <li> <a class="flaticon-searching50" href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=32&amp;AX=5&amp;MENU2=Tiendas virtuales" title="Tiendas virtuales">Tiendas virtuales</a></li>
-   
-       <li> <a class="flaticon-help9" href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=52&amp;AX=7&amp;MENU2=Testimonios" title="Testimonios">Testimonios</a></li>
-   
-       <li> <a class="flaticon-levels1" href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=30&amp;AX=4&amp;MENU2=Orden" title="Orden">Orden</a></li>
-   
-       <li> <a class="flaticon-gear80" href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=21&amp;AX=2&amp;MENU2=Parametros" title="Parametros">Parametros</a></li>
-                 </ul>
-        </div>
+	<div class="nav-h right">
+		<ul>
+			<li> <a class="flaticon-website17"
+					href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Website&amp;IDMENU=20&amp;AX=1&amp;MENU2=Menu"
+					title="Menu">Menu</a></li>
+
+			<li> <a class="flaticon-image2"
+					href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Website&amp;IDMENU=31&amp;AX=3&amp;MENU2=Banner"
+					title="Banner">Banner</a></li>
+
+			<li> <a class="flaticon-searching50"
+					href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Website&amp;IDMENU=32&amp;AX=5&amp;MENU2=Tiendas virtuales"
+					title="Tiendas virtuales">Tiendas virtuales</a></li>
+
+			<li> <a class="flaticon-help9"
+					href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Website&amp;IDMENU=52&amp;AX=7&amp;MENU2=Testimonios"
+					title="Testimonios">Testimonios</a></li>
+
+			<li> <a class="flaticon-levels1"
+					href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Website&amp;IDMENU=30&amp;AX=4&amp;MENU2=Orden"
+					title="Orden">Orden</a></li>
+
+			<li> <a class="flaticon-gear80"
+					href="?OPTIONS=19&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Website&amp;IDMENU=21&amp;AX=2&amp;MENU2=Parametros"
+					title="Parametros">Parametros</a></li>
+		</ul>
+	</div>
 </div>
 
+<?php
+if (isset($_GET['MENU2'])) {
+
+	switch ($_GET['MENU2']) {
+		case 'Menu':
+			include("pages/components/website/menu.php");
+			break;
+		case 'Banner':
+			include("pages/components/website/Banner.php");
+			break;
+		case 'Tiendas virtuales':
+			include("pages/components/website/virtual_shop.php");
+			break;
+		case 'Testimonios':
+			include("pages/components/website/testimonials.php");
+			break;
+		case 'Orden':
+			include("pages/components/website/order.php");
+			break;
+		case 'Parametros':
+			include("pages/components/website/parameters.php");
+			break;
+		default:
+			break;
+	}
+} else {
+	include("pages/components/website/website.php");
+}
+
+?>
 <?php
 include('inc/footer.php'); ?>

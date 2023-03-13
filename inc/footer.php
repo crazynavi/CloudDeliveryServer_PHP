@@ -1,8 +1,4 @@
-				</div>
-				<!--end::Wrapper-->
-			</div>
-			<!--end::Page-->
-		</div>
+		
 <script src="js/bootstrap.js"></script>
 </body>
 <script type="text/javascript">

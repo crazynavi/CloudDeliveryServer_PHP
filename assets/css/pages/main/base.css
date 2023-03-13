@@ -1,0 +1,396 @@
+.box-fit, .col4, .boton, .resumen-totales .row-line, .modal .modal-cont .row-line, form.stant input[type="text"], form.stant input[type="email"], form.stant input[type="nomber"], form.stant input[type="date"], form.stant input[type="password"], form.stant select, form.stant textarea, .cont {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.reset {
+  margin: 0;
+  padding: 0; }
+
+.center, .cont {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+.full {
+  width: 100%;
+  height: 100%; }
+
+.row {
+  position: relative;
+  overflow: hidden; }
+
+.div {
+  display: block;
+  margin-bottom: 10px; }
+
+.col4 {
+  width: 25%;
+  padding: 1%;
+  float: left; }
+
+.boton {
+  display: inline-block;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4px;
+  border: 0;
+  font-size: 14px;
+  line-height: 30px;
+  margin: 5px;
+  color: white;
+  width: auto;
+  background-color: #666666;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer; }
+
+input[type="button"].boton {
+  line-height: 0; }
+
+.boton:hover {
+  color: white;
+  opacity: .9; }
+
+.fullW {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 10px;
+  display: block; }
+
+.right {
+  float: right !important; }
+
+.left {
+  float: left !important; }
+
+.blue {
+  background-color: #0074E8;
+  color: #fff; }
+  .blue a {
+    color: #fff; }
+
+.gree {
+  background-color: #0E9250;
+  color: #fff; }
+  .gree a {
+    color: #fff; }
+
+.yellow {
+  background-color: #D9A300;
+  color: #fff; }
+  .yellow a {
+    color: #fff; }
+
+.red {
+  background-color: #EC3543;
+  color: #fff; }
+  .red a {
+    color: #fff; }
+
+.col2 {
+  width: 48%;
+  float: left; }
+
+.col2:first-child {
+  margin-right: 2%; }
+
+.row-line {
+  border-bottom: 1px solid #EAEAEA;
+  padding: 4px;
+  width: 100%;
+  float: left; }
+  .row-line .label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    width: 30%;
+    text-align: right;
+    display: block;
+    float: left;
+    height: 100%;
+    margin-right: 5px; }
+  .row-line .details {
+    font-size: 12px;
+    color: #444;
+    text-align: left;
+    width: 65%;
+    display: block;
+    float: left;
+    height: 100%; }
+    .row-line .details input, .row-line .details select, .row-line .details textarea {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      background-color: #F9F9F9;
+      padding: 3px;
+      padding-left: 5px;
+      width: 98%;
+      margin: 2px; }
+    .row-line .details a {
+      color: #666; }
+
+.row-line:last-child {
+  border-bottom: 0px solid #EAEAEA;
+  padding: 4px;
+  width: 100%;
+  float: left; }
+
+.resumen-totales .row-line {
+  border-bottom: 1px dashed #EAEAEA;
+  padding: 10px;
+  width: 90%; }
+  .resumen-totales .row-line .label {
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left; }
+  .resumen-totales .row-line .details {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right; }
+  .resumen-totales .row-line .details.total {
+    color: #E3240F; }
+  .resumen-totales .row-line .details.plus {
+    color: #5A81DA; }
+
+.ob {
+  border: 1px solid #CE1209 !important; }
+
+.wizard {
+  height: 65px;
+  padding: 10px; }
+
+.StepFinish, .StepProgrece, .StepWait {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 65px;
+  text-align: center;
+  position: relative; }
+
+.circle {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  z-index: 99;
+  position: relative; }
+
+.circle:before {
+  margin: 0  !important;
+  line-height: 30px;
+  font-size: 18px !important;
+  font-weight: normal;
+  color: white;
+  text-align: center; }
+
+.Bar {
+  height: 10px;
+  width: 100%;
+  margin-left: 56%;
+  position: absolute;
+  top: 11px;
+  z-index: 9; }
+
+.StepFinish .circle, .StepProgrece .circle {
+  background-color: #00B259; }
+
+.StepWait .circle {
+  background-color: #BBB; }
+
+.StepFinish .Bar {
+  background-color: #00B259; }
+
+.StepProgrece .Bar {
+  background-color: #BBBBBB; }
+
+.StepWait .Bar {
+  background-color: #BBBBBB; }
+
+.StepFinish span {
+  color: #00B259;
+  font-size: 14px; }
+
+.StepProgrece span {
+  color: #00B259;
+  font-size: 14px;
+  font-weight: bold; }
+
+.StepWait span {
+  color: #BBB;
+  font-size: 14px; }
+
+.StepFinish:last-child .Bar, .StepProgrece:last-child .Bar, .StepWait:last-child .Bar {
+  display: none; }
+
+h1 .boton, h2 .boton {
+  height: 25px;
+  font-size: 12px;
+  line-height: 25px;
+  margin: 0;
+  font-weight: 100; }
+h1 .boton.right, h2 .boton.right {
+  margin-left: 5px; }
+
+.copy {
+  padding: 10px;
+  font-size: 12px; }
+
+.div-h2 {
+  height: 48px; }
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(138, 138, 138, 0.69);
+  z-index: 99999999;
+  display: none; }
+  .modal .modal-cont {
+    width: 660px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -330px;
+    margin-top: -280px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff; }
+    .modal .modal-cont .col2.diferent-widht:first-child {
+      border-right: 1px solid #ccc;
+      width: 40%; }
+    .modal .modal-cont .col2.diferent-widht:last-child {
+      width: 56%; }
+    .modal .modal-cont .row-line {
+      border-bottom: 0;
+      padding: 10px; }
+      .modal .modal-cont .row-line .label {
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 5px; }
+      .modal .modal-cont .row-line .details {
+        font-weight: 400;
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-family: "Roboto", sans-serif; }
+      .modal .modal-cont .row-line .details.total {
+        color: #E3240F;
+        font-size: 34px; }
+      .modal .modal-cont .row-line .details.plus {
+        color: #5A81DA;
+        font-size: 26px; }
+
+.full-height {
+  height: 100%; }
+
+form.stant input[type="text"], form.stant input[type="email"], form.stant input[type="nomber"], form.stant input[type="date"], form.stant input[type="password"], form.stant select, form.stant textarea {
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  height: 30px;
+  width: 100%; }
+form.stant .input[type="checkbox"], form.stant input[type="radio"] {
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0; }
+form.stant label {
+  color: #888;
+  font-size: 12px; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.cont {
+  width: 100%;
+  overflow: hidden; }
+
+.body .cont {
+  padding: 1%; }
+
+.nav-h ul li {
+  float: left;
+  display: block;
+  position: relative; }
+  .nav-h ul li a {
+    text-decoration: none;
+    display: block; }
+  .nav-h ul li ul {
+    display: none;
+    position: absolute; }
+    .nav-h ul li ul li {
+      float: none; }
+.nav-h ul li:hover > ul {
+  display: block; }
+
+.nav-v ul li {
+  position: relative; }
+  .nav-v ul li a {
+    text-decoration: none;
+    display: block; }
+  .nav-v ul li ul {
+    display: none;
+    position: absolute; }
+    .nav-v ul li ul li {
+      float: none; }
+.nav-v ul li:hover > ul {
+  display: block; }
+
+/*# sourceMappingURL=base.css.map */

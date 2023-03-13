@@ -13,10 +13,13 @@ include("conn/connection.php"); ?>
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css">
 	<link href="assets/plugins/custom/prismjs/prismjs.bundle.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css">
+	<link href="assets/epo.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="assets/flaticon/flaticon.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- <link rel="stylesheet" href="assets/css/pages/main/reset.css"> -->
+	<!-- <link rel="stylesheet" href="assets/css/pages/main/base.css"> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="assets/js/app.js"></script>
 	<script src="assets/js/jquery.validate.min.js"></script>
@@ -27,7 +30,7 @@ include("conn/connection.php"); ?>
 	<header>
 		<div class="header-top d-flex justify-content-between align-items-center">
 			<div class="header-left">
-				<img class="logo" src="https://opscargo.com/wp-content/uploads/2017/09/admin-ajax.png" alt="logo" />
+				<img class="logo" src="assets/images/logo.png" alt="logo" />
 			</div>
 			<ul class="header-right h-100 m-0 d-flex align-items-center flex-row">
 				<li class="search hidden-mobile">

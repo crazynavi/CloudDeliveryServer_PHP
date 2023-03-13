@@ -10,6 +10,10 @@
     padding: 0;
 }
 
+strong{
+    font-size: 120% !important;
+}
+
 .center, .cont {
     margin-left: auto;
     margin-right: auto;
@@ -24,6 +28,7 @@
 .row {
     position: relative;
     overflow: hidden;
+    display: block;
 }
 
 .div {
@@ -141,10 +146,12 @@ input[type="button"].boton, h1 .list-style input[type="button"].cta-grip, h1 .li
     font-weight: bold;
     color: #222;
     width: 30%;
+    border-radius: initial;
+    background: initial;
     text-align: right;
     display: block;
     float: left;
-    height: 100%;
+    height: auto;
     margin-right: 5px;
 }
 
@@ -155,7 +162,7 @@ input[type="button"].boton, h1 .list-style input[type="button"].cta-grip, h1 .li
     width: 65%;
     display: block;
     float: left;
-    height: 100%;
+    height: auto;
 }
 
 .row-line .details input, .row-line .details select, .row-line .details textarea {
@@ -1323,6 +1330,7 @@ body {
 
 .act-nav ul li.actMenu ul {
     min-width: 200px;
+    z-index: 100;
     border-bottom-right-radius: 4px;
     border: 1px solid #DBDBDB;
     border-left: 0;
