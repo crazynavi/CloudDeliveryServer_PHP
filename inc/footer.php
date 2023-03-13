@@ -11,6 +11,5 @@
 			return false;
 		}
 	}
-
 </script>
 </html>
