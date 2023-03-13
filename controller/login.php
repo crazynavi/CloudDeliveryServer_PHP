@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include_once('../conn/connection.php');
 
 if (isset($_POST['login'])) {
