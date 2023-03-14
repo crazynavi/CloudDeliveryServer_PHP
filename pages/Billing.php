@@ -90,12 +90,34 @@ include_once('inc/header.php');
     <div class="nav-h right">
             <ul>
               
-       <li> <a class="flaticon-accounting" href="?OPTIONS=151&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=156&amp;AX=5&amp;MENU2=Mis Facturas" title="Mis facturas">Mis facturas</a></li>
+       <li> <a class="flaticon-accounting" href="?OPTIONS=151&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=BILLING&amp;IDMENU=156&amp;AX=5&amp;MENU2=Mis Facturas" title="Mis facturas">Mis facturas</a></li>
    
-       <li> <a class="flaticon-finance-and-business4" href="?OPTIONS=151&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=198&amp;AX=8&amp;MENU2=Walodis" title="Walodis">Walodis</a></li>
+       <li> <a class="flaticon-finance-and-business4" href="?OPTIONS=151&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=BILLING&amp;IDMENU=198&amp;AX=8&amp;MENU2=Walodis" title="Walodis">Walodis</a></li>
                  </ul>
         </div>
 </div>
+
+<?php
+if (isset($_GET['MENU2'])) {
+	
+	switch ($_GET['MENU2']) {
+		case 'Mis Facturas':
+			include("pages/components/billing/mybills.php");
+			break;
+		case 'Walodis':
+			include("pages/components/billing/walodis.php");
+			break;
+		
+		default:
+
+			break;
+	}
+}
+else{
+	 include("pages/components/billing/billing.php");
+}
+?>
+
 
 <?php
 include('inc/footer.php'); ?>

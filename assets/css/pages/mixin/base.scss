@@ -1,0 +1,48 @@
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin mx-transition($property) {
+  -webkit-transition: $property 2s;
+  -moz-transition: $property 2s;
+  -ms-transition: $property 2s;
+  transition: $property 2s;
+}
+
+
+@mixin center-horizontal-bottom($width) {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  margin-left: ($width/2)*(-1);
+
+}
+@mixin backgound-img($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+}
+
+@mixin div-img($url,$width,$height) {
+  width: $width;
+  height: $height;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size:$width $height;
+}
+
+
+@mixin padding_nav_item($padding){
+  padding-right:$padding ;
+  padding-left: $padding;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}

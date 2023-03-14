@@ -87,26 +87,81 @@ include_once('inc/header.php');
 		</ul>
 
 	</div>
-    <div class="nav-h right">
-            <ul>
-              
-       <li> <a class="flaticon-shop3" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=4&amp;AX=2&amp;MENU2=Oficinas" title="Oficinas">Oficinas</a></li>
-   
-       <li> <a class="flaticon-dollar103" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=97&amp;AX=16&amp;MENU2=Tarifas" title="Tarifas">Tarifas</a></li>
-   
-       <li> <a class="flaticon-cogwheels12" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=3&amp;AX=3&amp;MENU2=Usuarios" title="Usuarios">Usuarios</a></li>
-   
-       <li> <a class="flaticon-scissors11" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=79&amp;AX=10&amp;MENU2=Etiquetas" title="Etiquetas">Etiquetas</a></li>
-   
-       <li> <a class="flaticon-tasks2" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=76&amp;AX=9&amp;MENU2=Tipos cargos" title="Tipos cargos">Tipos cargos</a></li>
-   
-       <li> <a class="flaticon-list6" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=74&amp;AX=7&amp;MENU2=Bandejas" title="Bandejas">Bandejas</a></li>
-   
-       <li> <a class="flaticon-agreement2" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=66&amp;AX=5&amp;MENU2=Franquicias" title="Franquicias">Franquicias</a></li>
-   
-       <li> <a class="flaticon-businessman61" href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=203&amp;AX=19&amp;MENU2=Nomina" title="Nomina">Nomina</a></li>
-                 </ul>
-        </div>
+	<div class="nav-h right">
+		<ul>
 
-<?php
-include('inc/footer.php'); ?>
+			<li> <a class="flaticon-shop3"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=4&amp;AX=2&amp;MENU2=Oficinas"
+					title="Oficinas">Oficinas</a></li>
+
+			<li> <a class="flaticon-dollar103"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=97&amp;AX=16&amp;MENU2=Tarifas"
+					title="Tarifas">Tarifas</a></li>
+
+			<li> <a class="flaticon-cogwheels12"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=3&amp;AX=3&amp;MENU2=Usuarios"
+					title="Usuarios">Usuarios</a></li>
+
+			<li> <a class="flaticon-scissors11"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=79&amp;AX=10&amp;MENU2=Etiquetas"
+					title="Etiquetas">Etiquetas</a></li>
+
+			<li> <a class="flaticon-tasks2"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=76&amp;AX=9&amp;MENU2=Tipos cargos"
+					title="Tipos cargos">Tipos cargos</a></li>
+
+			<li> <a class="flaticon-list6"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=74&amp;AX=7&amp;MENU2=Bandejas"
+					title="Bandejas">Bandejas</a></li>
+
+			<li> <a class="flaticon-agreement2"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=66&amp;AX=5&amp;MENU2=Franquicias"
+					title="Franquicias">Franquicias</a></li>
+
+			<li> <a class="flaticon-businessman61"
+					href="?OPTIONS=1&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Mantenimiento&amp;IDMENU=203&amp;AX=19&amp;MENU2=Nomina"
+					title="Nomina">Nomina</a></li>
+		</ul>
+	</div>
+</div>
+	<?php
+	if (isset($_GET['MENU2'])) {
+
+		switch ($_GET['MENU2']) {
+			case 'Oficinas':
+				include("pages/components/maintenance/offices.php");
+				break;
+			case 'Tarifas':
+				include("pages/components/maintenance/rates.php");
+				break;
+			case 'Usuarios':
+				include("pages/components/maintenance/users.php");
+				break;
+			case 'Etiquetas':
+				include("pages/components/maintenance/tags.php");
+				break;
+			case 'Tipos cargos':
+				include("pages/components/maintenance/typesofcharges.php");
+				break;
+			case 'Bandejas':
+				include("pages/components/maintenance/trays.php");
+				break;
+			case 'Franquicias':
+				include("pages/components/maintenance/franchises.php");
+				break;
+			case 'Nomina':
+				include("pages/components/maintenance/payroll.php");
+				break;
+			default:
+				break;
+		}
+	} else {
+		include("pages/components/maintenance/maintenance.php");
+	}
+
+	?>
+
+
+
+	<?php
+	include('inc/footer.php'); ?>

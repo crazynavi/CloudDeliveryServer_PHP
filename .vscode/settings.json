@@ -2,5 +2,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[php]": {
         "editor.defaultFormatter": "DEVSENSE.phptools-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
     }
 }

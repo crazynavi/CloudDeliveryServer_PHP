@@ -1,0 +1,64 @@
+@import "../mixin/base";
+@import "../class/base";
+@import "reset";
+
+.cont{
+  @extend .center;
+  width: 100%;
+  overflow: hidden;
+  @extend .box-fit;
+}
+
+.body{
+  .cont{
+    padding: 1%;
+  }
+}
+
+.nav-h{
+  ul{
+    li{
+      float: left;
+      display: block;
+      position: relative;
+      a{
+        text-decoration: none;
+        display: block;
+      }
+      ul{
+        display: none;
+        position: absolute;
+        li{
+          float: none;
+        }
+      }
+    }
+
+    li:hover > ul{
+      display: block;
+    }
+  }
+}
+
+.nav-v{
+  ul{
+    li{
+      position: relative;
+      a{
+        text-decoration: none;
+        display: block;
+      }
+      ul{
+        display: none;
+        position: absolute;
+        li{
+          float: none;
+        }
+      }
+    }
+
+    li:hover > ul{
+      display: block;
+    }
+  }
+}

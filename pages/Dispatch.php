@@ -87,27 +87,79 @@ include_once('inc/header.php');
 		</ul>
 
 	</div>
-    <div class="nav-h right">
-            <ul>
-              
-       <li> <a class="flaticon-dollar103" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=99&amp;AX=1&amp;MENU2=Facturar" title="Facturar">Facturar</a></li>
-   
-       <li> <a class="flaticon-men1" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=158&amp;AX=4&amp;MENU2=Cambio titular" title="Cambio titular">Cambio titular</a></li>
-   
-       <li> <a class="flaticon-done2" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=100&amp;AX=2&amp;MENU2=Despachos" title="Despachos">Despachos</a></li>
-   
-       <li> <a class="flaticon-file128" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=166&amp;AX=7&amp;MENU2=Libras" title="Libras">Libras</a></li>
-   
-       <li> <a class="flaticon-file128" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=112&amp;AX=3B&amp;MENU2=Documentos" title="Documentos">Documentos</a></li>
-   
-       <li> <a class="flaticon-done2" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=209&amp;AX=9&amp;MENU2=Facturados" title="Facturados">Facturados</a></li>
-   
-       <li> <a class="flaticon-factories1" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=161&amp;AX=5&amp;MENU2=Almacen" title="Almacen">Almacen</a></li>
-   
-       <li> <a class="flaticon-file128" href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=165&amp;AX=6&amp;MENU2=Facturas" title="Facturas">Facturas</a></li>
-                 </ul>
-        </div>
-</div>
+	<div class="nav-h right">
+		<ul>
 
+			<li> <a class="flaticon-dollar103"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=99&amp;AX=1&amp;MENU2=Facturar"
+					title="Facturar">Facturar</a></li>
+
+			<li> <a class="flaticon-men1"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=158&amp;AX=4&amp;MENU2=Cambio titular"
+					title="Cambio titular">Cambio titular</a></li>
+
+			<li> <a class="flaticon-done2"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=100&amp;AX=2&amp;MENU2=Despachos"
+					title="Despachos">Despachos</a></li>
+
+			<li> <a class="flaticon-file128"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=166&amp;AX=7&amp;MENU2=Libras"
+					title="Libras">Libras</a></li>
+
+			<li> <a class="flaticon-file128"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=112&amp;AX=3B&amp;MENU2=Documentos"
+					title="Documentos">Documentos</a></li>
+
+			<li> <a class="flaticon-done2"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=209&amp;AX=9&amp;MENU2=Facturados"
+					title="Facturados">Facturados</a></li>
+
+			<li> <a class="flaticon-factories1"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=161&amp;AX=5&amp;MENU2=Almacen"
+					title="Almacen">Almacen</a></li>
+
+			<li> <a class="flaticon-file128"
+					href="?OPTIONS=98&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Despacho&amp;IDMENU=165&amp;AX=6&amp;MENU2=Facturas"
+					title="Facturas">Facturas</a></li>
+		</ul>
+	</div>
+</div>
+<?php
+if (isset($_GET['MENU2'])) {
+
+	switch ($_GET['MENU2']) {
+		case 'Facturar':
+			include("pages/components/dispatch/checkin.php");
+			break;
+		case 'Cambio titular':
+			include("pages/components/dispatch/ownerchange.php");
+			break;
+		case 'Despachos':
+			include("pages/components/dispatch/dispatches.php");
+			break;
+		case 'Libras':
+			include("pages/components/dispatch/pounds.php");
+			break;
+		case 'Documentos':
+			include("pages/components/dispatch/documents.php");
+			break;
+		case 'Facturados':
+			include("pages/components/dispatch/billed.php");
+			break;
+		case 'Almacen':
+			include("pages/components/dispatch/store.php");
+			break;
+		case 'Facturas':
+			include("pages/components/dispatch/bills.php");
+			break;
+
+		default:
+
+			break;
+	}
+} else {
+	include("pages/components/dispatch/dispatch.php");
+}
+?>
 <?php
 include('inc/footer.php'); ?>

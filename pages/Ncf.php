@@ -91,15 +91,35 @@ include_once('inc/header.php');
                 <ul>
 
                         <li> <a class="flaticon-eye130"
-                                        href="?OPTIONS=77&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=78&amp;AX=1&amp;MENU2=Listar"
+                                        href="?OPTIONS=77&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Ncf&amp;IDMENU=78&amp;AX=1&amp;MENU2=Listar"
                                         title="Listar">Listar</a></li>
 
                         <li> <a class="flaticon-hand119"
-                                        href="?OPTIONS=77&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Menu&amp;IDMENU=197&amp;AX=5&amp;MENU2=NCF-606"
+                                        href="?OPTIONS=77&amp;SESSION=3SADioSkzT,WjqquBdSPx3&amp;IDS=40&amp;MENU=Ncf&amp;IDMENU=197&amp;AX=5&amp;MENU2=NCF-606"
                                         title="Ncf-606">Ncf-606</a></li>
                 </ul>
         </div>
 </div>
 
+<?php
+if (isset($_GET['MENU2'])) {
+	
+	switch ($_GET['MENU2']) {
+		case 'Listar':
+			include("pages/components/ncf/lists.php");
+			break;
+		case 'NCF-606':
+			include("pages/components/ncf/ncf_606.php");
+			break;
+		
+		default:
+
+			break;
+	}
+}
+else{
+	 include("pages/components/ncf/ncf.php");
+}
+?>
 <?php
 include('inc/footer.php'); ?>
